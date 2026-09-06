@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -774,10 +775,12 @@
     if (!SHEET_LOG_URL) return;
     fetch(SHEET_LOG_URL, {
       method: 'POST',
-      mode: 'no-cors',
       headers: { 'Content-Type': 'text/plain' },
       body: JSON.stringify(payload)
-    }).catch(err => console.warn('Sheet logging failed (session still works locally):', err));
+    })
+      .then(res => res.text())
+      .then(txt => console.log('Sheet log SUCCESS:', txt))
+      .catch(err => console.error('Sheet log FAILED — check this error:', err));
   }
 
   document.getElementById('btn-interview-continue').addEventListener('click', () => {
