@@ -273,7 +273,7 @@
       <div class="clock-row"><span class="clock">8:15</span><span class="clock-sub" id="clockSub">Lecture starts 8:45</span></div>
       <p class="lead" id="contextLead">Imagine you're near Toowong Village, about to head to UQ. It's a warm morning.</p>
 
-      <img src="toowong-photo.JPG" alt="" style="width:100%; border-radius:10px; margin-bottom:14px;">
+      <img src="CFF503D1-07C4-4CCA-A7B6-800AE5ECC144.jpeg" alt="" style="width:100%; border-radius:10px; margin-bottom:14px;">
 
       <div class="scenario-box" id="contextBox">
         Before you set off, you open the app to see what's coming and how to get there.
@@ -617,7 +617,6 @@
   }
 
   const quantQuestions = [
-    "I noticed the crowding information without having to look for it",
     'I understood what "Bus Full", "Filling up", and "Seats Free" meant without having to think about it.',
     "I trusted the crowding information the app showed me.",
     "Checking crowding felt like a normal part of planning my trip, not an extra step.",
@@ -747,7 +746,7 @@
     recordCurrentDecision();
     show('post');
   });
-  const SHEET_LOG_URL = "https://script.google.com/macros/s/AKfycby5NsG8YxYYc61yeVYCxj8Px3NOjorM10e_vrGSarUuGbEVNlQ0IMjNIkIhYBm3AWP6/exec";
+  const SHEET_LOG_URL = "https://script.google.com/macros/s/AKfycbwXWjW0M2i6aOZOmEZopo_IEm82s9mg48hf5Upjg2BD2yJyjBUWl3gAL-dMwWopeCDf/exec";
 
   function logToSheet(payload){
     if (!SHEET_LOG_URL) return;
@@ -769,7 +768,7 @@
     ).join(' | ');
     document.getElementById('logLines').innerHTML = `
       <div class="log-line"><span>Decisions</span><span>${decisionsSummary}</span></div>
-      <div class="log-line"><span>Q1-Q8</span><span>${quantAnswers.join(', ')}</span></div>
+      <div class="log-line"><span>Q1-Q7</span><span>${quantAnswers.join(', ')}</span></div>
       <div class="log-line"><span>Time on task</span><span>${elapsed}s</span></div>
     `;
     const payload = {
